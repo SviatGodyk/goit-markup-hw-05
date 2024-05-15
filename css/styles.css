@@ -409,7 +409,9 @@ img {
   letter-spacing: 0.02em;
   max-width: 264px;
 }
-
+.footer-social {
+  margin-right: 80px;
+}
 .footer-social-title {
   font-weight: 500;
   font-size: 16px;
@@ -450,6 +452,64 @@ img {
 .footer-social-link:focus {
   background-color: #31d0aa;
 }
+.footer-email-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.footer-email-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 453px;
+  height: 40px;
+}
+.footer-email-label {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.footer-email-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  padding-left: 16px;
+  color: #ffffff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  border: 1px solid #4d5ae5;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  margin-left: 24px;
+  background: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+}
+.footer-subscribe-icon {
+  fill: #fff;
+}
 /* ========== BACKDROP STYLES ========== */
 .backdrop {
   position: fixed;
@@ -485,14 +545,19 @@ img {
   right: 24px;
   padding: 0;
   border: none;
-  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  fill: #2e2f42;
+  background-color: #e7e9fc;
   line-height: 0;
   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   stroke: #4d5ae5;
-  fill: none;
+  fill: #fff;
+  background-color: #404bbf;
 }
 .backdrop-leave-contacts {
   max-width: 360px;
@@ -554,7 +619,7 @@ img {
   padding: 8px 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-..backdrop-contacts-field-textarea:active {
+.backdrop-contacts-field-textarea:active {
   border: 1px solid #4d5ae5;
   outline: transparent;
 }
@@ -572,18 +637,54 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+.backdrop-contacts-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  fill: transparent;
+}
+.backdrop-contacts-form-checkbox:checked
+  + .backdrop-contacts-label-checkbox
+  .backdrop-contacts-own-checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: #404bbf;
+  border-color: #404bbf;
+  fill: #f4f4fd;
+}
+.backdrop-contacts-form-checkbox:focus
+  + .backdrop-contacts-label-checkbox
+  .backdrop-contacts-own-checkbox {
+  outline: 1px solid rgba(0, 0, 255, 0.5);
+}
 .privacy-policy-link {
   line-height: 1.33;
   text-decoration: underline;
   color: #4d5ae5;
 }
-.backdrop-contact-custom-checkbox {
-  display: inline-flex;
+.backdrop-submit-btn {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  fill: transparent;
+  flex-direction: row;
+  gap: 10px;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #4d5ae5;
+  margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

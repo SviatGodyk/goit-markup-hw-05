@@ -505,13 +505,34 @@
             </li>
           </ul>
         </div>
+        <div class="footer-email-subscribe">
+          <p class="footer-email-title">Subsribe</p>
+          <form class="footer-email-form" name="E-mail" autocomplete="off">
+            <label class="footer-email-label" for="user-email">
+              <input
+                class="footer-email-input"
+                type="text"
+                name="user-email"
+                id="user-email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button class="footer-subscribe-btn" type="submit">
+              Subscribe
+              <svg class="footer-subscribe-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- ========= BACKDROP ========= -->
     <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-btn" type="button">
-          <svg class="modal-close-btn-icon" width="24" height="24">
+          <svg class="modal-close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -595,15 +616,22 @@
               value="true"
               required
             />
-            <label class="backdrop-contacts-label-checkbox" for="privacy-policy"
-              >I accept the terms and conditions of the
+            <label
+              class="backdrop-contacts-label-checkbox"
+              for="privacy-policy"
+            >
+              <span class="backdrop-contacts-own-checkbox">
+                <svg
+                  class="backdrop-contacts-icon-checkbox"
+                  width="10"
+                  height="8"
+                >
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
               <a class="privacy-policy-link" href="">Privacy Policy</a></label
             >
-            <span class="backdrop-contact-custom-checkbox">
-              <svg class="backdrop-icon-checkbox" width="10" height="8">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </span>
           </div>
           <button class="backdrop-submit-btn" type="submit">Send</button>
         </form>
