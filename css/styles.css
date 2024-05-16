@@ -513,6 +513,7 @@ img {
 }
 .footer-subscribe-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 /* ========== BACKDROP STYLES ========== */
 .backdrop {
@@ -622,9 +623,11 @@ img {
   outline: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.backdrop-contacts-form-input:focus {
+  border-color: #4d5ae5;
+}
 .backdrop-contacts-form-input:focus + .backdrop-contacts-form-icon {
   fill: #4d5ae5;
-  border-color: #4d5ae5;
 }
 .backdrop-contacts-form-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -642,7 +645,7 @@ img {
   background-color: transparent;
   resize: none;
   padding: 8px 16px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-contacts-field-textarea:active,
 .backdrop-contacts-field-textarea:focus {
