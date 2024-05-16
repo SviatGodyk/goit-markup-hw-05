@@ -468,6 +468,7 @@ img {
   align-items: center;
   max-width: 453px;
   height: 40px;
+  gap: 24px;
 }
 .footer-email-label {
   display: flex;
@@ -480,6 +481,9 @@ img {
 .footer-email-input {
   border: 1px solid #fff;
   border-radius: 4px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   width: 264px;
   height: 40px;
   background-color: transparent;
@@ -493,10 +497,10 @@ img {
   justify-content: center;
   flex-direction: row;
   gap: 16px;
-  border: 1px solid #4d5ae5;
+  border: none;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   margin-left: 24px;
   background: #4d5ae5;
@@ -517,7 +521,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   z-index: 999999;
   opacity: 0;
   visibility: hidden;
@@ -536,28 +540,39 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   top: 24px;
   right: 24px;
   padding: 0;
   border: none;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   fill: #2e2f42;
   background-color: #e7e9fc;
   line-height: 0;
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   stroke: #4d5ae5;
   fill: #fff;
   background-color: #404bbf;
+}
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-leave-contacts {
   max-width: 360px;
@@ -599,6 +614,7 @@ img {
   height: 40px;
   padding-left: 38px;
   background-color: transparent;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-contacts-form-input:active {
@@ -608,20 +624,31 @@ img {
 }
 .backdrop-contacts-form-input:focus + .backdrop-contacts-form-icon {
   fill: #4d5ae5;
+  border-color: #4d5ae5;
+}
+.backdrop-contacts-form-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-contacts-field-textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   width: 360px;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: transparent;
   background-color: transparent;
   resize: none;
   padding: 8px 16px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop-contacts-field-textarea:active {
+.backdrop-contacts-field-textarea:active,
+.backdrop-contacts-field-textarea:focus {
   border: 1px solid #4d5ae5;
   outline: transparent;
+  border-color: #4d5ae5;
 }
 .backdrop-contacts-field-textarea::placeholder {
   line-height: 1.17;
@@ -631,7 +658,7 @@ img {
 .backdrop-contacts-field-checkbox {
   margin-bottom: 24px;
 }
-.backdrop-contacts-label-checkbox- {
+.backdrop-contacts-label-checkbox {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -647,6 +674,9 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-contacts-form-checkbox:checked
   + .backdrop-contacts-label-checkbox
@@ -654,6 +684,7 @@ img {
   width: 16px;
   height: 16px;
   background-color: #404bbf;
+  border: none;
   border-color: #404bbf;
   fill: #f4f4fd;
 }
@@ -668,7 +699,7 @@ img {
   color: #4d5ae5;
 }
 .backdrop-submit-btn {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -676,7 +707,7 @@ img {
   background-color: #4d5ae5;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   font-weight: 500;
   font-size: 16px;
@@ -684,7 +715,7 @@ img {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  border: 1px solid #4d5ae5;
+  border: none;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
